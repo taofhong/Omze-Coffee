@@ -1,0 +1,169 @@
+/* Estilos generales */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Menú fijo */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    z-index: 1000;
+}
+
+nav a {
+    color: white;
+    margin: 0 30px;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    color: #ff9f00;
+    transform: scale(1.1);
+}
+
+/* Sección 1: Video - Ajustes para ocupar toda la pantalla */
+.video-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    object-fit: cover;
+}
+
+/* Secciones */
+section {
+    padding: 100px 20px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+section:nth-child(odd) {
+    background-color: black;
+    color: white;
+}
+
+section:nth-child(even) {
+    background-color: aqua;
+    color: black;
+}
+
+/* Estilos para los productos */
+.product {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.product img {
+    width: 400px; /* Tamaño aumentado de la imagen */
+    height: auto;
+    border-radius: 10px;
+    margin: 10px 20px;
+}
+
+.product-content {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.product h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.product p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.product button {
+    padding: 10px 20px;
+    background-color: #25D366;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.product button:hover {
+    background-color: #128C7E;
+}
+
+/* WhatsApp logo flotante */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    padding: 15px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.whatsapp-btn img {
+    width: 40px;
+    height: 40px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer a {
+    color: white;
+    margin: 0 10px;
+    font-size: 18px;
+}
