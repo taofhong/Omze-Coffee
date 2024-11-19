@@ -3,13 +3,12 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
-    box-sizing: border-box;
+    background-color: #111;
+    color: white;
 }
 
-h1, h2, p {
-    margin: 0;
-    padding: 0;
+h1, h2 {
+    font-weight: bold;
 }
 
 a {
@@ -17,153 +16,179 @@ a {
     color: inherit;
 }
 
-/* Menú fijo */
-nav {
+/* Barra de navegación fija */
+.navbar-fixed {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: black;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-nav a {
-    color: white;
-    margin: 0 30px;
-    font-size: 20px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    transition: all 0.3s ease;
+.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
 }
 
-nav a:hover {
-    color: #ff9f00;
-    transform: scale(1.1);
+.nav-link {
+    font-size: 1.2rem;
+    margin-left: 15px;
+    transition: color 0.3s ease;
 }
 
-/* Sección 1: Video - Ajustes para ocupar toda la pantalla */
-.video-section {
+.nav-link:hover {
+    color: #00FFFF;
+}
+
+/* Sección de video fullscreen */
+.section-video {
     position: relative;
     width: 100%;
     height: 100vh;
     overflow: hidden;
-    z-index: -1;
 }
 
-.video-container {
-    position: absolute;
-    top: 0;
-    left: 0;
+.section-video video {
     width: 100%;
     height: 100%;
-    background-color: black;
-}
-
-.video-container iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
     object-fit: cover;
 }
 
-/* Secciones */
-section {
-    padding: 100px 20px;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
 }
 
-section:nth-child(odd) {
-    background-color: black;
-    color: white;
+.overlay h1 {
+    font-size: 4rem;
 }
 
-section:nth-child(even) {
-    background-color: aqua;
-    color: black;
+/* Secciones de cafés */
+.section {
+    padding: 60px 0;
 }
 
-/* Estilos para los productos */
-.product {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: left;
-    max-width: 1200px;
-    width: 100%;
+.cafe-section {
+    background-color: #111;
 }
 
-.product img {
-    width: 400px; /* Tamaño aumentado de la imagen */
+.cafe-section.bg-aqua {
+    background-color: #00FFFF;
+}
+
+.cafe-section img {
+    max-width: 100%;
     height: auto;
-    border-radius: 10px;
-    margin: 10px 20px;
-}
-
-.product-content {
-    flex: 1;
-    margin-left: 20px;
-}
-
-.product h2 {
-    font-size: 32px;
-    margin-bottom: 15px;
-}
-
-.product p {
-    font-size: 18px;
     margin-bottom: 20px;
 }
 
-.product button {
-    padding: 10px 20px;
-    background-color: #25D366;
-    border: none;
-    color: white;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
+.cafe-section .btn-buy {
+    background-color: #00FFFF;
+    color: #111;
+    font-weight: bold;
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    border-radius: 30px;
     transition: background-color 0.3s ease;
 }
 
-.product button:hover {
+.cafe-section .btn-buy:hover {
+    background-color: #ff00f7;
+    color: white;
+}
+
+/* Sección de ventas al por mayor */
+#seccion5 {
+    padding: 60px 0;
+    background-color: #222;
+}
+
+#seccion5 .btn-whatsapp {
+    background-color: #25D366;
+    color: white;
+    font-weight: bold;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+#seccion5 .btn-whatsapp:hover {
     background-color: #128C7E;
 }
 
-/* WhatsApp logo flotante */
-.whatsapp-btn {
+/* Botón WhatsApp flotante */
+.whatsapp-button {
     position: fixed;
     bottom: 20px;
     right: 20px;
     background-color: #25D366;
     padding: 15px;
     border-radius: 50%;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
 }
 
-.whatsapp-btn img {
+.whatsapp-button img {
     width: 40px;
     height: 40px;
 }
 
 /* Footer */
-footer {
-    background-color: #333;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
+.footer {
+    background-color: #111;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
 
-footer a {
+.footer p {
+    font-size: 1rem;
     color: white;
-    margin: 0 10px;
-    font-size: 18px;
+    margin: 0;
+}
+
+/* Estilos para el menú de navegación */
+.navbar {
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: white !important;
+    padding: 10px 20px;
+    text-transform: uppercase;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: #00FFFF !important;
+}
+
+/* Sección de café */
+.cafe-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.cafe-section p {
+    font-size: 1.2rem;
+    color: #ddd;
+}
+
+.cafe-section img {
+    max-width: 400px;
+    border-radius: 10px;
+    margin-bottom: 20px;
 }
