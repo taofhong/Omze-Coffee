@@ -69,27 +69,20 @@ a {
     font-size: 4rem;
 }
 
-/* Sección de cafés */
-.section {
+/* Sección 2: Café Premium */
+#seccion2 {
+    background-color: #222; /* Fondo oscuro */
+    color: white;
+    text-align: center;
     padding: 60px 0;
 }
 
-.cafe-section {
-    background-color: #111;
-    text-align: center;
-}
-
-.cafe-section.bg-aqua {
-    background-color: #00FFFF;
-}
-
-/* Contenedor 3D */
-.cafe-container {
+#seccion2 .cafe-container {
     perspective: 1000px;
     margin-bottom: 30px;
 }
 
-.cafe-card {
+#seccion2 .cafe-card {
     position: relative;
     width: 300px;
     height: 300px;
@@ -98,12 +91,12 @@ a {
     margin: 0 auto;
 }
 
-.cafe-container:hover .cafe-card {
+#seccion2 .cafe-container:hover .cafe-card {
     transform: rotateY(180deg);
 }
 
-.cafe-card .cafe-front,
-.cafe-card .cafe-back {
+#seccion2 .cafe-front,
+#seccion2 .cafe-back {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -111,7 +104,7 @@ a {
     border-radius: 10px;
 }
 
-.cafe-card .cafe-front {
+#seccion2 .cafe-front {
     background: #222;
     display: flex;
     align-items: center;
@@ -119,12 +112,12 @@ a {
     overflow: hidden;
 }
 
-.cafe-card .cafe-front img {
+#seccion2 .cafe-front img {
     max-width: 100%;
     border-radius: 10px;
 }
 
-.cafe-card .cafe-back {
+#seccion2 .cafe-back {
     background: #00FFFF;
     color: #111;
     transform: rotateY(180deg);
@@ -135,6 +128,136 @@ a {
     font-size: 1.2rem;
     padding: 20px;
     border-radius: 10px;
+}
+
+/* Sección 3: Café Orgánico */
+#seccion3 {
+    background-color: #00FFFF; /* Fondo turquesa */
+    color: #111; /* Texto oscuro */
+    text-align: center;
+    padding: 60px 0;
+}
+
+#seccion3 .cafe-container {
+    perspective: 1000px;
+    margin-bottom: 30px;
+}
+
+#seccion3 .cafe-card {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    transform-style: preserve-3d;
+    transition: transform 0.8s;
+    margin: 0 auto;
+}
+
+#seccion3 .cafe-container:hover .cafe-card {
+    transform: rotateY(180deg);
+}
+
+#seccion3 .cafe-front,
+#seccion3 .cafe-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+}
+
+#seccion3 .cafe-front {
+    background: #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#seccion3 .cafe-front img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+#seccion3 .cafe-back {
+    background: #111;
+    color: #fff;
+    transform: rotateY(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Sección 4: Café Descafeinado */
+#seccion4 {
+    background-color: #111; /* Fondo índigo */
+    color: white;
+    text-align: center;
+    padding: 60px 0;
+}
+
+#seccion4 .cafe-container {
+    perspective: 1000px;
+    margin-bottom: 30px;
+}
+
+#seccion4 .cafe-card {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    transform-style: preserve-3d;
+    transition: transform 0.8s;
+    margin: 0 auto;
+}
+
+#seccion4 .cafe-container:hover .cafe-card {
+    transform: rotateY(180deg);
+}
+
+#seccion4 .cafe-front,
+#seccion4 .cafe-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+}
+
+#seccion4 .cafe-front {
+    background: #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#seccion4 .cafe-front img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+#seccion4 .cafe-back {
+    background: #00FFFF;
+    color: #111;
+    transform: rotateY(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Sección 5: Ventas al por mayor */
+#seccion5 {
+    background-color: #2F4F4F; /* Fondo gris oscuro */
+    color: white;
+    text-align: center;
+    padding: 60px 0;
 }
 
 /* Botón de compra */
@@ -185,3 +308,4 @@ a {
     color: white;
     margin: 0;
 }
+
