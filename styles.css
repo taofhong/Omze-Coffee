@@ -69,25 +69,75 @@ a {
     font-size: 4rem;
 }
 
-/* Secciones de cafés */
+/* Sección de cafés */
 .section {
     padding: 60px 0;
 }
 
 .cafe-section {
     background-color: #111;
+    text-align: center;
 }
 
 .cafe-section.bg-aqua {
     background-color: #00FFFF;
 }
 
-.cafe-section img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 20px;
+/* Contenedor 3D */
+.cafe-container {
+    perspective: 1000px;
+    margin-bottom: 30px;
 }
 
+.cafe-card {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    transform-style: preserve-3d;
+    transition: transform 0.8s;
+    margin: 0 auto;
+}
+
+.cafe-container:hover .cafe-card {
+    transform: rotateY(180deg);
+}
+
+.cafe-card .cafe-front,
+.cafe-card .cafe-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+}
+
+.cafe-card .cafe-front {
+    background: #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.cafe-card .cafe-front img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.cafe-card .cafe-back {
+    background: #00FFFF;
+    color: #111;
+    transform: rotateY(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Botón de compra */
 .cafe-section .btn-buy {
     background-color: #00FFFF;
     color: #111;
@@ -96,32 +146,12 @@ a {
     font-size: 1.2rem;
     border-radius: 30px;
     transition: background-color 0.3s ease;
+    margin-top: 20px;
 }
 
 .cafe-section .btn-buy:hover {
     background-color: #ff00f7;
     color: white;
-}
-
-/* Sección de ventas al por mayor */
-#seccion5 {
-    padding: 60px 0;
-    background-color: #222;
-}
-
-#seccion5 .btn-whatsapp {
-    background-color: #25D366;
-    color: white;
-    font-weight: bold;
-    padding: 15px 40px;
-    font-size: 1.2rem;
-    border-radius: 30px;
-    text-transform: uppercase;
-    transition: background-color 0.3s ease;
-}
-
-#seccion5 .btn-whatsapp:hover {
-    background-color: #128C7E;
 }
 
 /* Botón WhatsApp flotante */
@@ -154,41 +184,4 @@ a {
     font-size: 1rem;
     color: white;
     margin: 0;
-}
-
-/* Estilos para el menú de navegación */
-.navbar {
-    padding: 20px 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 999;
-}
-
-.navbar-nav .nav-item .nav-link {
-    color: white !important;
-    padding: 10px 20px;
-    text-transform: uppercase;
-}
-
-.navbar-nav .nav-item .nav-link:hover {
-    color: #00FFFF !important;
-}
-
-/* Sección de café */
-.cafe-section h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-.cafe-section p {
-    font-size: 1.2rem;
-    color: #ddd;
-}
-
-.cafe-section img {
-    max-width: 400px;
-    border-radius: 10px;
-    margin-bottom: 20px;
 }
